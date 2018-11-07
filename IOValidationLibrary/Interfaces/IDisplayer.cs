@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace IOValidationLibrary.Interfaces
+namespace IOValidation.Interfaces
 {
     interface IDisplayer
     {

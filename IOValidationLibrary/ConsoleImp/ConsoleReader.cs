@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using IOValidationLibrary.Interfaces;
+using IOValidation.Interfaces;
 
-namespace IOValidationLibrary.ConsoleImp
+namespace IOValidation.ConsoleImp
 {
     class ConsoleReader : IReader
     {
@@ -14,7 +14,7 @@ namespace IOValidationLibrary.ConsoleImp
             while (true)
             {
                 try
-                {
+                {//comment
                     bool isHasError = false;
                     @string = GetNotEmptyString();
                     string oneOfNumbers = String.Empty;
