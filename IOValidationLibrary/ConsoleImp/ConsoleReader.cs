@@ -6,7 +6,7 @@ using IOValidation.Interfaces;
 
 namespace IOValidation.ConsoleImp
 {
-    class ConsoleReader : IReader
+   public class ConsoleReader : IReader
     {
 
         public double[] GetDoubleArray(string @string = null)
