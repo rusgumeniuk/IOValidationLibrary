@@ -4,7 +4,7 @@ using System.Text;
 
 namespace IOValidation.Interfaces
 {
-    interface IConsole
+    public interface IConsole
     {
         void DisplayMainMenu();
         void DisplayMenu(string title, string description);
