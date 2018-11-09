@@ -145,7 +145,7 @@ namespace IOValidation.ConsoleImp
         
         public char GetNotNullChar(string @string = null)
         {
-            @string = @string ?? Console.ReadLine().Trim();
+            @string = (@string ?? Console.ReadLine()).Trim();
             if (@string.Length == 1 && !Char.IsSeparator(@string[0])) return @string[0];
             else throw new ArgumentException("This is not one not empty char!");
         }
