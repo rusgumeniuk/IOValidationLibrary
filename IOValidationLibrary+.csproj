@@ -33,7 +33,7 @@
     <RootNamespace>IOValidation</RootNamespace>
   </PropertyGroup>
   <PropertyGroup>
-    <AutoGenerateBindingRedirects>false</AutoGenerateBindingRedirects>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Microsoft.CSharp" />
@@ -155,7 +155,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="IOValidationLibrary\ConsoleImp\ConsoleReader.cs" />
-    <Compile Include="IOValidationLibrary\Interfaces\IDisplayer.cs" />
+    <Compile Include="IOValidationLibrary\Interfaces\IConsole.cs" />
     <Compile Include="IOValidationLibrary\Interfaces\IReader.cs" />
     <Compile Include="IOValidationLibrary\obj\Debug\netstandard2.0\IOValidationLibrary.AssemblyInfo.cs" />
   </ItemGroup>
