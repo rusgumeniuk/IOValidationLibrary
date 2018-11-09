@@ -12,7 +12,7 @@ namespace IOValidation.ConsoleImp
         {
             try
             {                
-                @string = GetNotEmptyString(@string);
+                @string = GetNotEmptyString();
                 string oneOfNumbers = String.Empty;
                 List<char> separatingChars = new List<char> { ' ', '.', '\t', '\n', '\b', '\r' };
                 List<double> arrayOfNumbers = new List<double>();
@@ -49,7 +49,7 @@ namespace IOValidation.ConsoleImp
         {
             try
             {                
-                @string = GetNotEmptyString(@string);
+                @string = GetNotEmptyString();
                 string oneOfNumbers = String.Empty;
                 List<char> separatingChars = new List<char> { ' ', '.', '\t', '\n', '\b', '\r' };
                 List<int> arrayOfNumbers = new List<int>();
@@ -85,7 +85,7 @@ namespace IOValidation.ConsoleImp
 
         public double GetDoubleNumber(string @string = null)
         {
-            if (!double.TryParse(@string ?? GetNotEmptyString(), out double number))
+            if (!double.TryParse(GetNotEmptyString(), out double number))
             {
                 throw new ArgumentException("I can not parse it :c");
             }
@@ -94,7 +94,7 @@ namespace IOValidation.ConsoleImp
 
         public double GetDoubleNumber(double min, string @string = null)
         {
-            double number =  GetDoubleNumber(@string);
+            double number = GetDoubleNumber();
             if (number < min)
             {
                 throw new ArgumentException("Number should be not less than minimum!");
@@ -104,7 +104,7 @@ namespace IOValidation.ConsoleImp
 
         public double GetDoubleNumber(double min, double max, string @string = null)
         {
-            double number = GetDoubleNumber(min, @string);
+            double number = GetDoubleNumber(min);
             if (number > max)
             {
                 throw new ArgumentException("Number should be not more than maximum!");
@@ -115,7 +115,7 @@ namespace IOValidation.ConsoleImp
 
         public int GetIntNumber(string @string = null)
         {
-            if (!int.TryParse(@string ?? GetNotEmptyString(), out int n))
+            if (!int.TryParse(GetNotEmptyString(), out int n))
             {
                 throw new ArgumentException("I can not parse it :c");
             }
@@ -124,7 +124,7 @@ namespace IOValidation.ConsoleImp
 
         public int GetIntNumber(int min, string @string = null)
         {
-            int number = GetIntNumber(@string);
+            int number = GetIntNumber();
             if (number < min)
             {
                 throw new ArgumentException("Number should be not less than minimum!");
@@ -134,7 +134,7 @@ namespace IOValidation.ConsoleImp
 
         public int GetIntNumber(int min, int max, string @string = null)
         {
-            int number = GetIntNumber(min, @string);
+            int number = GetIntNumber();
             if (number > max)
             {
                 throw new ArgumentException("Number should be not more than maximum!");
@@ -145,7 +145,7 @@ namespace IOValidation.ConsoleImp
         
         public char GetNotNullChar(string @string = null)
         {
-            @string = @string ?? Console.ReadLine().Trim();
+            @string = Console.ReadLine().Trim();
             if (@string.Length == 1 && !Char.IsSeparator(@string[0])) return @string[0];
             else throw new ArgumentException("This is not one not empty char!");
         }
@@ -153,14 +153,14 @@ namespace IOValidation.ConsoleImp
 
         public string GetNotEmptyString(string @string = null)
         {
-            @string = @string ?? Console.ReadLine().Trim();
+            @string = Console.ReadLine().Trim();
             if (!String.IsNullOrEmpty(@string)) return @string;
             else throw new ArgumentException("This is not non-empty string!");
         }        
 
         public string GetOneWord(string @string = null)
         {
-            @string = GetNotEmptyString(@string);
+            @string = GetNotEmptyString();
             if (@string.IndexOfAny(new char[] { ',', '.', ' ', '\n', '\t' }) == -1)
             {
                 return @string;
@@ -170,7 +170,7 @@ namespace IOValidation.ConsoleImp
 
         public string GetBinary(string @string = null)
         {
-            @string = GetNotEmptyString(@string);
+            @string = GetNotEmptyString();
             string result = @string.Clone() as string;
             if (@string.Contains('1') || @string.Contains('0'))
             {
