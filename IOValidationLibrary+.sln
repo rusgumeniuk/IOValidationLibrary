@@ -5,6 +5,8 @@ VisualStudioVersion = 15.0.28010.2050
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IOValidationLibrary+", "IOValidationLibrary+.csproj", "{11A1F103-8967-4AAA-AEE4-C6ACAF4C1F62}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IOValidationTestProject", "..\IOValidationTestProject\IOValidationTestProject.csproj", "{F3F5C266-C560-4C7D-B3EB-6B4DF56A28D6}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{11A1F103-8967-4AAA-AEE4-C6ACAF4C1F62}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{11A1F103-8967-4AAA-AEE4-C6ACAF4C1F62}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{11A1F103-8967-4AAA-AEE4-C6ACAF4C1F62}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F3F5C266-C560-4C7D-B3EB-6B4DF56A28D6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F3F5C266-C560-4C7D-B3EB-6B4DF56A28D6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F3F5C266-C560-4C7D-B3EB-6B4DF56A28D6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F3F5C266-C560-4C7D-B3EB-6B4DF56A28D6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
