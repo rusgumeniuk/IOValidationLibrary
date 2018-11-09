@@ -8,7 +8,6 @@ namespace IOValidation.ConsoleImp
 {
    public class ConsoleReader : IReader
     {
-
         public double[] GetDoubleArray(string @string = null)
         {
             try
@@ -31,8 +30,8 @@ namespace IOValidation.ConsoleImp
                         }
                         if (double.TryParse(oneOfNumbers, out double res)) arrayOfNumbers.Add(res);
                         else
-                        {                            
-                            throw new FormatException("'" + oneOfNumbers + "' does not parse. Try again!");                            
+                        {
+                            throw new FormatException("'" + oneOfNumbers + "' can not be parsed.");
                         }
                     }
                 }
@@ -49,8 +48,7 @@ namespace IOValidation.ConsoleImp
         public int[] GetIntArray(string @string)
         {
             try
-            {
-                bool isHasError = false;
+            {                
                 @string = GetNotEmptyString();
                 string oneOfNumbers = String.Empty;
                 List<char> separatingChars = new List<char> { ' ', '.', '\t', '\n', '\b', '\r' };
@@ -70,11 +68,11 @@ namespace IOValidation.ConsoleImp
                         if (int.TryParse(oneOfNumbers, out int res)) arrayOfNumbers.Add(res);
                         else
                         {                            
-                            throw new FormatException("'" + oneOfNumbers + "' does not parse. Try again!");                            
+                            throw new FormatException("'" + oneOfNumbers + "' can not be parsed.");                            
                         }
                     }
                 }
-                if (!isHasError && arrayOfNumbers.Count > 0) return arrayOfNumbers.ToArray();
+                if (arrayOfNumbers.Count > 0) return arrayOfNumbers.ToArray();
                 else throw new ArgumentException("User inputed no one number");
             }
             catch (Exception exception)
